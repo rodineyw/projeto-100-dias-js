@@ -4,17 +4,18 @@ const ligth = document.querySelector(".light");
 const qrContainer = document.querySelector("#qr-code");
 const qrText = document.querySelector(".qr-text");
 const shareBtn = document.querySelector(".share-btn");
-const sizer = document.querySelector(".sizer");
+const sizes = document.querySelector(".sizes");
 
 dark.addEventListener("input", handleDarkColor);
 ligth.addEventListener("input", handleLightColor);
 qrText.addEventListener("input", handleQRText);
-sizes.addEventListener("input", handleSize);
-shareBtn.addEventListener("input", hendleSahre);
+sizes.addEventListener("change", handleSize);
+shareBtn.addEventListener("click", handleShare);
 
-const defaultUrl = "https://youtube.com/roodart_";
+const defaultUrl = "https://google.com";
 let colorLight = "#fff",
     colorDark = "#000",
+    text = defaultUrl,
     size = 300;
 
 function handleDarkColor(e) {
@@ -38,20 +39,20 @@ function handleQRText(e) {
 
 async function generateQRCode() {
     qrContainer.innerHTML = "";
-    new generateQRCode("qr-code", {
+    new QRCode("qr-code", {
         text,
         height: size,
         width: size,
         colorLight,
         colorDark,
     });
-    download.href = await revolveDataUrl() ;
+    download.href = await resolveDataUrl();
 }
 
 async function handleShare() {
     setTimeout(async () => {
         try {
-            const base64url = await resolvedataUrl();
+            const base64url = await resolveDataUrl();
             const blob = await (await fetch(base64url)).blob();
             const file = new File([blob], "QRCode.png", {
                 type: blob.type,
@@ -71,7 +72,7 @@ function handleSize(e) {
     generateQRCode();
 }
 
-function resolvedataUrl() {
+function resolveDataUrl() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             const img = document.querySelector("#qr-code img");
