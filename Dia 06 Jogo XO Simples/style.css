@@ -71,7 +71,7 @@ span {
     top: 0;
 }
 
-buttom {
+button {
     background: #818181;
     border-radius: 2px;
     color: #ffffff;
@@ -79,7 +79,7 @@ buttom {
     outline: none;
 }
 
-buttom:focus {
+button:focus {
     background: #c9c9c9;
 }
 

@@ -16,7 +16,7 @@ function play(y) {
             playerTurn = "x";
         }
     }
-    
+
     /* Tipos de vitorias */
 
     checkWinner(1, 2, 3);
@@ -39,7 +39,7 @@ function checkWinner(a, b, c) {
     b--;
     c--;
 
-    if ((span[a].dataset.player === span[b].dataset) && (span[b].dataset.player === span[c].dataset.player) && (span[a].dataset.player === span[c].dataset.player) && (span[a].dataset.player === "x" || span[a].dataset.player === "o") && isGameOver == false) {
+    if ((span[a].dataset.player === span[b].dataset.player) && (span[b].dataset.player === span[c].dataset.player) && (span[a].dataset.player === span[c].dataset.player) && (span[a].dataset.player === "x" || span[a].dataset.player === "o") && isGameOver == false) {
         span[a].parentNode.className += " activeBox ";
         span[b].parentNode.className += " activeBox ";
         span[c].parentNode.className += " activeBox ";
@@ -51,7 +51,7 @@ function playAgain() {
     document.getElementsByClassName("alert")[0].parentNode.removeChild(document.getElementsByClassName("alert")[0]);
     resetGame();
     window.isGameOver = false;
-    for (var k = 0; k < span.lenght; k++) {
+    for (var k = 0; k < span.length; k++) {
         span[k].parentNode.className = span[k].parentNode.className.replace("activeBox", "");
     }
 }
@@ -65,7 +65,7 @@ function resetGame() {
 }
 
 function gameOver(a) {
-    var gameOverAlertElement = "<b>GAME OVER </b><br><br> Player " + span[a].dataset.player.tpUpperCase() + ' Win !!! <br><br>' + restartButton;
+    var gameOverAlertElement = "<b>GAME OVER </b><br><br> Player " + span[a].dataset.player.toUpperCase() + ' Win !!! <br><br>' + restartButton;
     var div = document.createElement("div");
     div.className = "alert";
     div.innerHTML = gameOverAlertElement;
