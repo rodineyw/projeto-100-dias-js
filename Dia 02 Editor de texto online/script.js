@@ -42,7 +42,7 @@ const intializar = () => {
     fontSizeRef.value = 3;
 };
 
-const modifyText = (command, dafaultUi, value) => {
+const modifyText = (command, defaultUi, value) => {
     document.execCommand(command, defaultUi, value);
 };
 
