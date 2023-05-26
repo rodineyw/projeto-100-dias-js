@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --cor-dark: #1f1822;
+  --cor-dark-200: #522c58;
+  --cor-dark-400: #48216a;
+  --cor-light: #00a7bd;
+  --cor-light-200: #226567;
+  --cor-light-400: #1d4950;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body {
+  background-color: var(--cor-dark);
+}
+
+.container {
+  width: 500px;
+  background: var(--cor-dark-200);
+  padding: 80px 40px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  box-shadow: 0 30px 45px var(--cor-light);
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+h2 span {
+  color: var(--cor-light-200);
+}
+
+.wrapper-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0 70px 0;
+  gap: 10px;
+}
+
+.wrapper-1 input {
+  width: 100px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+input {
+  padding: 15px 10px;
+  border: 1px solid var(--cor-light-200);
+  color: var(--cor-light);
+  outline: none;
+  background: transparent;
+}
+
+input:focus {
+  border: 2px solid var(--cor-light);
+}
+
+label {
+  color: var(--cor-light);
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.wrapper-2 input, .wrapper-3 input {
+  width: 100%;
+  font-size: 18px;
+}
