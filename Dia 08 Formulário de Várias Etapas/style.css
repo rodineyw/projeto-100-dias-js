@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Raleway:ital,wght@0,200;0,400;0,500;0,700;1,100&family=Source+Code+Pro:wght@300;400;700&display=swap');
+
+:root {
+    --cor-primary: #0e586c;
+    --cor-secundary: #0e4272;
+    --cor-dark: #1a263f;
+    --cor-white: #c4c4c4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+}
+
+body {
+    background: var(--cor-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 50rem;
+    height: 40rem;
+    margin: 8% auto;
+    background: var(--cor-primary);
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px var(--cor-dark);
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--cor-white);
+}
+
+.container form {
+    width: 20rem;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    transition: 0.5s;
+}
+
+form input {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid var(--cor-white);
+    outline: none;
+    background: transparent;
+}
+
+::placeholder {
+    color: var(--cor-white);
+}
+
+.btn-box {
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+form button {
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to right, var(--cor-primary), var(--cor-secundary));
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    color: var(--cor-white);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+#form2 {
+    left: 450px;
+}
+
+#form3 {
+    left: 450px;
+}
+
+.step-row {
+    width: 360px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px var(--cor-white);
+    position: relative;
+}
+
+.step-col {
+    width: 120px;
+    text-align: center;
+    color: var(--cor-primary);
+    position: relative;
+}
+
+#progress {
+    position: absolute;
+    height: 100%;
+    width: 120px;
+    background: linear-gradient(to right, #1565c0, #1976d2);
+}
+
+small {
+    color: var(--cor-white);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+#progress::after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #1976d2;
+}
